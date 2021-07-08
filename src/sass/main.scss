@@ -1,0 +1,18 @@
+body {
+  padding: 30px;
+}
+
+.timer {
+  display: flex;
+  gap: 20px;
+
+  & .value {
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+
+.field span {
+  display: block;
+  text-align: center;
+}

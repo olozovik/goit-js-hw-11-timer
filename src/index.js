@@ -29,7 +29,7 @@ refs.date.addEventListener('change', checkDate);
 
 function checkDate() {
   targetDate = new Date(refs.date.valueAsDate.setHours(0));
-  console.log(targetDate);
+  // console.log(targetDate);
   const currentDate = new Date();
 
   if (!refs.date.value) {
@@ -38,6 +38,7 @@ function checkDate() {
   }
   if (targetDate - currentDate < 1) {
     Swal.fire(errorDateSettingsSweetalert2);
+    refs.date.value = '';
     return;
   }
   refs.startBtn.disabled = false;

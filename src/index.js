@@ -28,7 +28,8 @@ let targetDate;
 refs.date.addEventListener('change', checkDate);
 
 function checkDate() {
-  targetDate = new Date(refs.date.value);
+  targetDate = new Date(refs.date.valueAsDate.setHours(0));
+  console.log(targetDate);
   const currentDate = new Date();
 
   if (!refs.date.value) {
